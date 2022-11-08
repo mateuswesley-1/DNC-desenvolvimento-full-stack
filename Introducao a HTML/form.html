@@ -9,11 +9,71 @@
 <body>
     <h1>Contato</h1>
     <form action="https://formspree.io/f/xgeqredg" method="POST">
-        <input type="text" placeholder="Digite algo.." required value="" name="">
-        <!--Está vinculado ao form-->
-        <button type="submit">Enviar</button>
+        <p>
+            <label for="nome">Nome:</label><br>
+            <input type="text" placeholder="Digite algo.." required value="" name="NOME" id="nome">
+        </p>
+        
+        <p>
+            <label for="mensagem">Mensagem</label><br>
+            <textarea placeholder='Digite sua mensagem..' name="mensagem" id="mensagem" required rows="5" cols="50">Oi, tudo bem?</textarea>
+        </p>
 
+        <p>
+            Esportes que você pratica:
+            <ul style="list-style-type: none;">
+                <li>
+                    <input type="checkbox" value="jiuJitsu" name="esporte" id="jiujitsu">
+                    <label for="jiujitsu">Jiu-Jitsu</label>
+                </li>
+                    
+                <li>
+                    <input type="checkbox" value="Futebol" name="esporte" id="futebol">
+                    <label for="futebol">Futebol</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" value="anime" name="esporte" id="anime">
+                    <label for="anime">Anime</label>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Cor favorita:
+            <ul style="list-style-type: none;"> 
+                <li>
+                    <input type="radio" value="vermelho" name="cor"
+                    id="vermelho"> <label for="vermelho">Vermelho</label>                
+                </li>
+
+                <li>
+                    <input type="radio" value="azul" name="cor"
+                    id="azul"> <label for="azul">Azul</label>
+                </li>
+
+                <li>
+                    <input type="radio" value="Amarelo" name="cor"
+                    id="Amarelo"> <label for="Amarelo">Amarelo</label>
+                </li>
+            </ul>
+        </p>
+
+        Cidade: <br>
+        <select name="cidade" id="cidades">
+            <option value="mossoro">Mossoró</option>
+            <option value="natal" selected>Natal</option>
+            <option value="tibau">Tibau</option>
+        </select> <br>
+
+        <p>
+            <input type="checkbox" value="sim" name="contrato" id="contrato"> <label for="contrato">Eu aceito os termos de contrato</label>
+        </p>
+        
+        <button style='margin-top: 20px' type="submit">Enviar</button>
 
     </form>
+
+    
 </body>
 </html>
