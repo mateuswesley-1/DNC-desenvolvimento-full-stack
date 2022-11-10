@@ -36,12 +36,12 @@ header >nav > a{
     color: #1B434D;
 }
 
-main{
+#apresentacao{
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-section#intro{
+article#intro{
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -49,23 +49,22 @@ section#intro{
     padding-left: 40px;
 }
 
-section#intro>input{
+article#intro>input{
     width: 110px;
 }
 
-section#intro>h1>span{
+article#intro>h1>span{
     font-size: 30px;
     font-family: 'Dancing Script', cursive;
 }
 
-section#imagem{
+figure#imagem{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: -50px;
 }
 
-section#imagem>img{
+figure#imagem>img{
     border-radius: 5%;
     max-width: 300px;
     height: 300px;
@@ -88,6 +87,9 @@ section#clientes > nav{
 
 img#bruno{
     width: 80px;
+    border-radius: 100px;
+    position: relative;
+    bottom: 12px;
 }
 
 
