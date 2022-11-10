@@ -2,6 +2,7 @@ body{
     margin-left: 15%;
     margin-right: 15%;
     font-family: 'Roboto Mono', monospace;
+    background: #eceaea;
 }
 h1, h2{
    color: #222A38;
@@ -13,7 +14,6 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 50px;
-    background: #1EA8C7;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
@@ -71,25 +71,76 @@ figure#imagem>img{
 }
 
 section#clientes{
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    background: #7FC1D0;
 }
 
 section#clientes > nav{
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: right;
 }
 
-img#bruno{
-    width: 80px;
-    border-radius: 100px;
-    position: relative;
-    bottom: 12px;
+img#mateus{
+    width: 150px;
+    border-radius: 100%;
 }
 
+img#luno{
+    width: 100px;
+    border-radius: 100%;
+}
 
+img#amanda{
+    width: 100px;
+    border-radius: 100%;
+}
+
+section#propaganda{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section#propaganda > figure>img{
+    width: 300px;
+    border-radius: 5%;
+}
+
+#imediatamente{
+    padding: 2px;
+    background: rgb(226, 134, 134);
+}
+
+input#email{
+    width: 100px;
+}
+
+section#projetos{
+    margin-top: 100px;
+}
+
+section#projetos > article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.img_port{
+    width: 100px;
+    border-radius: 5%;
+}
+
+footer{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 10px;
+}
+
+section#projetos > article>div{
+    text-align: center;
+}
