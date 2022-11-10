@@ -1,0 +1,93 @@
+body{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: 'Roboto Mono', monospace;
+}
+h1, h2{
+   color: #222A38;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    background: #1EA8C7;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+header > h2{
+    font-family: 'Dancing Script', cursive;
+}
+
+
+header>nav{
+    display: flex;
+    margin-right: 60px;
+    gap: 20px;
+}
+
+header >nav > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1B434D;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding-left: 40px;
+}
+
+section#intro>input{
+    width: 110px;
+}
+
+section#intro>h1>span{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+section#imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -50px;
+}
+
+section#imagem>img{
+    border-radius: 5%;
+    max-width: 300px;
+    height: 300px;
+}
+
+section#clientes{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background: #7FC1D0;
+}
+
+section#clientes > nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+img#bruno{
+    width: 80px;
+}
+
+
