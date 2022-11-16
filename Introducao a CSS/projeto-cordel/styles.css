@@ -33,7 +33,7 @@ pre{
 }
 
 div{
-    font-size: 3vw;
+    font-size: 4vw;
 
  }
 
@@ -60,9 +60,18 @@ div#p4{
     margin: 20px;
 }
 
-div pre{
-    background-color: rgba(255, 251, 251, 0.904);
-    max-width: 37vw;
+div#p4 pre{
+    background-color: rgba(13, 13, 13, 0.923);
+    color: white;
+    max-width: 48vw;
+}
+div#p2 pre{
+    background-color: rgba(240, 235, 235, 0.796);
+    max-width: 48vw;
+}
+
+div#pre{
+    max-width: 55vw;
 }
 
 div#p2,
