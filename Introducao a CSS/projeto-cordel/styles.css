@@ -1,0 +1,73 @@
+header{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+header section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h2{
+    font-size: 3vw;
+}
+
+header h1{
+    font-size: 7vw;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Sriracha', cursive;
+}
+
+pre{
+    /*remove espaços extras*/
+    white-space: pre-line;
+    font-family: 'Sriracha', cursive, monospace;
+}
+
+div{
+    font-size: 3vw;
+
+ }
+
+div#p1,
+div#p3,
+div#p5{
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    background: white;
+}
+
+div#p2{
+    background: black url('imagens/background001.jpg') center top no-repeat fixed;
+    background-size: cover;
+    padding: 20px;
+    margin: 20px;
+}
+
+div#p4{
+    background: black url('imagens/background002.jpg') center top no-repeat fixed;
+    background-size: cover;
+    padding: 20px;
+    margin: 20px;
+}
+
+div pre{
+    background-color: rgba(255, 251, 251, 0.904);
+    max-width: 37vw;
+}
+
+div#p2,
+div#p4,
+div#p6{
+    color: black;
+    background-color: white;
+}
