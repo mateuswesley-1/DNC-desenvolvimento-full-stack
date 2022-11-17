@@ -38,14 +38,14 @@
         </caption>
         <thead>
             <tr>
-                <th>Grupo</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupo</th>
+                <th scope="nomes">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="2">Mulheres</th>
+                <th rowspan="2" scope="rowgroup">Mulheres</th>
                 <td>Roberta</td>
                 <td>Interestelar</td>
                 <td>One Piece</td>
@@ -58,7 +58,7 @@
                 <td>A cor do pecado</td>
             </tr>
             <tr>
-                <th rowspan="2">Homens</th>
+                <th rowspan="2" scope="rowgroup">Homens</th>
                 <td>Charlys</td>
                 <td>Batman</td>
                 <td>Shazan</td>
@@ -71,7 +71,7 @@
                 <td>Bleach</td>
             </tr>
             <tr>
-                <th rowspan="2">Não Binário</th>
+                <th rowspan="2" scope="rowgroup">Não Binário</th>
                 <td>Juví</td>
                 <td>Angra</td>
                 <td>Metallica</td>
@@ -83,6 +83,11 @@
                 <td>Heavy Metal</td>
                 <td>Psicologia</td>
             </tr>
+
+            <tfoot>
+                <th colspan="4" scope="row">Total</th>
+                <td>1000</td>
+            </tfoot>
         </tbody>
     </table>
 </body>
