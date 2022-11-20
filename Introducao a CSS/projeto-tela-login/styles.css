@@ -1,0 +1,253 @@
+body{
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #303030;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    margin: 0;
+    gap:20px;
+    
+}
+
+header>nav{
+    display: flex;
+    gap: 20px;
+}
+
+header>nav>a{
+    padding: 4px;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+}
+
+header>nav>a:hover{
+    text-decoration: underline;
+    color: #060505;
+    background: #f0eded;
+}
+
+header>nav>a:active{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+header>button{
+    color: #FFFFFF;
+    background: #0C70F2;
+    box-shadow: 1px 1px 1px black;
+    max-height: 30px;
+    max-width: 80px;
+}
+
+header>button:hover{
+    text-decoration: underline;
+    color: #0C70F2;
+    background: #FFFFFF;
+}
+
+header>button:active{
+    position: relative;
+    top: 2px;
+    left: 2px;  
+}
+
+
+main{
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 1%, rgba(12, 112, 242, 0) 60%), #303030;
+    width: 100%;
+    height: 100%;
+}
+
+section#descrition{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    padding: 50px 0; 
+}
+
+section#descrition>h1{
+    font-weight: 800;
+    margin-top: 0;
+}
+
+section#descrition>p{
+    max-width: 800px;
+    margin: auto;
+}
+
+section#descrition>p>span{
+    background: #303030;
+}
+
+section#formulario{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+section#formulario>form{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 200px;
+    padding: 0 100px;
+}
+
+section#formulario>form>div#checkbox{
+    display: flex;
+    justify-content: space-around;
+}
+section#formulario>form>input{
+    border-radius: 8px;
+    width: 400px;
+    height: 20px;
+    padding: 5px;
+}
+
+section#formulario>form>label{
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+section#formulario>form>button{
+    padding: 5px;
+    background: #0C70F2;
+    color:#FFFFFF;
+    border-radius: 8px;
+    margin: 20px 0 0 0;
+}
+
+section#formulario>form>button:hover{
+    background: #0a5ac4
+}
+
+section#formulario>form>button:active{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+footer{
+    background: #0C70F2;
+    font-size: 25px;
+    padding: 10px;
+}
+
+footer nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 330px;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer #linha1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul li{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+footer ul li a:hover{
+    color: #303030;
+}
+
+footer h5{
+    text-align: center;
+    font-weight: 800;
+    font-size: 15px;
+    background-color: #060505;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+}
+
+footer #endereco{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    max-width: 300px;   
+}
+footer #linha2{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    height: 20px;
+}
+footer #linha2 a{
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+footer #linha2 a:hover{
+    color: #303030;
+}
+
+footer #linha2 a:first-child{
+    color: #303030;
+    border-right: 2px solid white;
+}
+
+
+@media only screen and (max-width: 600px){
+    header nav{
+        flex-direction: column;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#formulario>form>input{
+        max-width: 300px
+    }
+
+    section#descrition{
+        font-size: 20px;
+        line-height: 30px;
+        padding: 50px;
+    }
+
+    section#formulario{
+        padding:0 100px;
+    }
+
+    footer #linha1{
+        flex-direction: column;
+    }
+
+    
+}
