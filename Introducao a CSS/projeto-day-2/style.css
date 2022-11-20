@@ -131,17 +131,11 @@ header span{
         font-size: 20px;
     }
 
-    section#formulario>form>input{
+    form input{
         max-width: 300px
     }
 
-    section#descrition{
-        font-size: 20px;
-        line-height: 30px;
-        padding: 50px;
-    }
-
-    section#formulario{
+    form{
         padding:0 100px;
     }
     
