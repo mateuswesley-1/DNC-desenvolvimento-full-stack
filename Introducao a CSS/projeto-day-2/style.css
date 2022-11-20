@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.834);
+    font-size: 29px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imagens/pacificador.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section#corpo{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img{
+    width: 165px;
+}
+
+header>nav{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header>nav>a{
+    color: white;
+    text-decoration: none;
+}
+
+header>nav>a:visited{
+    color: white;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 600px;
+    max-height: 80vh;
+    margin: auto;
+}
+
+main h1{
+    margin-top: 50px;
+}
+
+main p{
+
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 500px;
+    height: 300px;
+    margin-top: -30px;
+}
+
+form > input{
+    width: 380px;
+    height: 35px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.493);
+    border: none;
+    padding: 5px 20px;
+}
+
+form > label{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+button{
+    color: rgba(0, 0, 0, 0.837);
+    background-image: linear-gradient(to bottom right, #A18CD1ed, #FBC2EB);
+    font-size: 24px;
+    border-radius: 25px;
+}
+
+form>button{
+    width: 140px;
+    height: 40px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 5px 15px;
+}
+
+button:hover{
+    background-image: linear-gradient(to bottom right, #8876b3ed, #c680b2);
+}
+
+button#provedor{
+    margin-top: 30px;
+    padding: 5px 20px;
+}
+
+main>p{
+    text-align: center;
+    margin-top:50px;
+}
+
+
+header span{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        font-size: 20px;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#formulario>form>input{
+        max-width: 300px
+    }
+
+    section#descrition{
+        font-size: 20px;
+        line-height: 30px;
+        padding: 50px;
+    }
+
+    section#formulario{
+        padding:0 100px;
+    }
+    
+}
