@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="POST" autocomplete="on">
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1990" max="2020" value="2000" oninput="idade.innerHTML = (Number(new Date().getFullYear())-Number(iano.value))">
+        <p>
+            <label for="idade">Sua idade:</label>
+            <output id="idade">22</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar" oninput="ivalue.innerHTML = inum.value">
+            <input type="reset" value="Resetar" oninput="ivalue.innerHTML = inum.value">
+        </p>
+    </form>
+</body>
+</html>
