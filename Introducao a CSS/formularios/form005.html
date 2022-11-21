@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Oi</h1>
+    <form action="cadastro.js" method="GET" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc" value="M"><label for="imasc">Masculino</label><br>
+            <input type="radio" name="sexo" id="ifem" value="F"><label for="ifem">Feminino</label><br>
+            <input type="radio" name="sexo" id="inb" checked value="nb">
+            <label for="inb">Não-Binário</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+
+            <input type="checkbox" name="basket" id="ibasket"> <label for="ibasket">Basket</label><br>
+
+            <input type="checkbox" name="futebol" id="ifutebol" checked><label for="ifutebol">Futebol</label><br>
+
+            <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">Volei</label><br>
+
+            <input type="checkbox" name="jiujitsu" id="ijiujitsu"><label for="ijiujitsu">Jiu-Jitsu</label>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Resetar">
+        </p>
+    </form>
+</body>
+</html>
