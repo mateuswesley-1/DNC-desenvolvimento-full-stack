@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        input[type='number']{
+            width: 50px;
+        }
+        span#numerador{
+            border-bottom: 1px solid black;
+        }
+
+        p#resultado{
+            width: 100px;
+            height: 50px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p span{
+            margin: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Média</h1>
+        <p>
+            <label for="inota1">Nota 1:</label> <input type="number" name="nota1" value='5' id="inota1" min="0" max="10" oninput="this.value = this.value.replace(/[^0-9]/,'')">
+            <label for="ipeso1">Peso 1: </label> <input type="number" value='1' name="peso1" id="ipeso1" min="0" oninput="this.value = this.value.replace(/[^0-9]/,'')">
+        </p>
+        <p>
+            <label for="inota2">Nota 2:</label> <input  value='5' type="number" name="nota2" id="inota2" min="0" max="10" oninput="this.value = this.value.replace(/[^0-9]/,'')">
+            <label for="ipeso2">Peso 2:</label> <input type="number" name="peso2" value='1' id="ipeso2" min="0" oninput="this.value = this.value.replace(/[^0-9]/,'')">
+        </p>
+        <p><button onclick="calcular()">Resultado</button></p>
+        <p id="resultado"></p>
+
+
+        <script>
+            function calcular(){
+                let nota1 = document.querySelector('input#inota1').value
+                let peso1 = document.querySelector('input#ipeso1').value
+
+                let nota2 = document.querySelector('input#inota2').value
+                let peso2 = document.querySelector('input#ipeso2').value
+
+                let media = (Number(nota1)*Number(peso1) + Number(nota2)*Number(peso2))/(Number(peso1)+Number(peso2))
+
+                let resultado = document.querySelector('p#resultado')
+                resultado.innerHTML = `<span id=numerador>${nota1}*${peso1} + ${nota2}*${peso2}</span> <span>${peso1}+${peso2}</span> <span id='media'> = ${Math.round(media*10)/10}</span>`
+            }
+        </script>
+</body>
+</html>
