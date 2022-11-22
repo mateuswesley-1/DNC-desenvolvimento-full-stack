@@ -22,9 +22,10 @@
         function info(){
             let resultado = document.querySelector('div#resultado')
             let texto = document.querySelector('input#itexto').value
-            /*No javascript, qualquer comparação com NaN da false, então se a Number(texto) der diferente dela mesma, significa que é NaN, logo texto não é um número*/
+            /*No javascript, qualquer igualdade com NaN da false, mesmo fazer NaN == NaN, então se a Number(texto) der diferente dela mesma, significa que é NaN, logo texto não é um número*/
             if(Number(texto)!=Number(texto)){
                 var tipo = 'string'
+                /*Se for somente espaços, classifica como string*/
             }else if(texto.trim()==''){
                 var tipo = 'string'
             }else{
@@ -39,7 +40,7 @@
             //tirando todas as letras, se nao sobar nada, é alfabetico
             let alpha= texto.replace(/[a-zA-Z]/g,'') == ''
 
-            //tiramo tudo que é numero e letra se sobrar algo é pq é alphanumérico
+            //tiramo tudo que é numero e letra se não sobrar nada é pq é alphanumérico
             let alpha_num = texto.replace(/[0-9a-zA-Z]/g,'').trim() == ''
 
             //primeiro remove tudo que nao for letra
