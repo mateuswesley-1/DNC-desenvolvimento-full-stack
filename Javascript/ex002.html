@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Me diga seu nome:</h1>
+    <div id="div-nome">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" autofocus>
+    </div>
+    <div id="div-botoes">
+        <button onclick="mensagem()">Enviar</button>
+        <button onclick="apagar()">Apagar</button>
+    </div>
+    <div id="div-msg">
+
+    </div>
+
+
+    <script>
+        function mensagem(){
+            let nome = document.querySelector('input#nome').value
+            let msg = document.querySelector('div#div-msg')
+            nome = nome[0].toUpperCase() + nome.slice(1)
+            msg.innerHTML = `Oi ${nome}, seja bem vinde!`
+        }
+        
+        function apagar(){
+            let nome = document.querySelector('input#nome')
+            let msg = document.querySelector('div#div-msg')
+            msg.innerHTML = ``
+            nome.value = ''
+        }
+    </script>
+</body>
+</html>
