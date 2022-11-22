@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero</title>
+</head>
+<body>
+    <h1>Digite um número:</h1>
+    <p>
+        <input type="number" name="num" id="inum" oninput="calcular(Number(this.value))">
+    </p>
+
+    <p id="resultado"></p>
+    <script>
+        function calcular(numero){
+            let resultado = document.querySelector('p#resultado')
+            let dobro = numero*2
+            let triplo = numero*3
+            let quadrado = Math.pow(numero, 2)
+            let raiz = Math.pow(numero, 1/2)
+
+            resultado.innerHTML = `<p>Dobro: ${dobro}</p>
+                                   <p>Triplo: ${triplo}</p>
+                                   <p>Número ao quadrado: ${quadrado}</p>
+                                   <p>Raiz quadrada: ${Math.round(raiz*100)/100}</p>`
+        }
+    </script>
+</body>
+</html>
