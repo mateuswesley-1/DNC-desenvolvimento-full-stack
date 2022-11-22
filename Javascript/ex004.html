@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissecando uma Variável</title>
+    <style>
+        span{
+            background-color: #5d88c4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite algo:</h1>
+    <input type="text" name="texto" id="itexto" autofocus>
+    <button onclick="info()">Ok</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+        function info(){
+            let resultado = document.querySelector('div#resultado')
+            let texto = document.querySelector('input#itexto').value
+            /*No javascript, qualquer comparação com NaN da false, então se a Number(texto) der diferente dela mesma, significa que é NaN, logo texto não é um número*/
+            if(Number(texto)!=Number(texto)){
+                var tipo = 'string'
+            }else if(texto.trim()==''){
+                var tipo = 'string'
+            }else{
+                var tipo = 'number'
+            }
+            // verificando se so tem espaços
+            let espaco = texto.trim() == ''
+
+            // tiramos todos os números e espaços, se não sobrar nada é pq é numérico
+            let numerico = texto.replace(/[0-9]/g,'').trim() == ''
+
+            //tirando todas as letras, se nao sobar nada, é alfabetico
+            let alpha= texto.replace(/[a-zA-Z]/g,'') == ''
+
+            //tiramo tudo que é numero e letra se sobrar algo é pq é alphanumérico
+            let alpha_num = texto.replace(/[0-9a-zA-Z]/g,'').trim() == ''
+
+            //primeiro remove tudo que nao for letra
+            //dps so as maisculucas, se nao sobrar nada é pq todas as letras q tinha era maiscucula
+            let maiuscula = texto.replace(/[^a-zA-Z]/g,'').replace(/[A-Z]/g, '').trim() == ''
+
+            let minuscula = texto.replace(/[^a-zA-Z]/g, '').replace(/[a-z]/g, '').trim() == ''
+
+            resultado.innerHTML = `<p>Tipo primitivo desse valor: <span id='tipo'>${tipo}</span></p>
+            <p>Só tem espaços: <span id=espaco>${espaco}</span></p>
+                <p>É numérico: <span id=numerico>${numerico}</span></p>
+                    <p>É alfabético: <span id=alpha>${alpha}</span></p>
+                        <p>É alphanumérico <span id=alphaNum>${alpha_num}</span></p>
+                            <p>Tem só letras maisculas: <span id=maiuscula>${maiuscula}</span></p>
+                                <p>Tem só letras minúsculas: <span id=minuscula>${minuscula}</span></p>`
+            if(tipo=='number'){
+                document.getElementById('tipo').style.backgroundColor = '#a3c45d'
+            }else{
+                document.getElementById('tipo').style.backgroundColor = '#5d88c4'
+            }
+            if(espaco){
+                document.getElementById('espaco').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('espaco').style.backgroundColor = '#cb5858'
+            }
+
+            if(numerico){
+                document.getElementById('numerico').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('numerico').style.backgroundColor = '#cb5858'
+            }
+
+            
+            if(alpha_num){
+                document.getElementById('alphaNum').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('alphaNum').style.backgroundColor = '#cb5858'
+            }
+
+            if(alpha){
+                document.getElementById('alpha').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('alpha').style.backgroundColor = '#cb5858'
+            }
+
+            if(maiuscula){
+                document.getElementById('maiuscula').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('maiuscula').style.backgroundColor = '#cb5858'
+            }
+
+            if(minuscula){
+                document.getElementById('minuscula').style.backgroundColor = '#81c790'
+            }else{
+                document.getElementById('minuscula').style.backgroundColor = '#cb5858'
+            }
+
+        }
+    </script>
+</body>
+</html>
