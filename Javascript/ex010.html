@@ -31,56 +31,64 @@
 </head>
 <body>
     <h1>Convertor de Moedas</h1>
-    <input type="number" name="dinheiro" id="idinheiro" oninput="converter(this.value, imoeda1.value, imoeda2.value)">
-    <select name="moeda1" id="imoeda1" onselect="converter(idinheiro.value, this.value, imoeda2.value)">
+    <input type="number" name="dinheiro" id="idinheiro1" value='1' min=0 oninput="entrada1()">
+    <select name="moeda1" id="imoeda1" oninput="entrada1()">
         <option value="real">R$</option>
         <option value="dolar">$</option>
         <option value="euro">€</option>
         <option value="won">₩</option>
         <option value="yen">¥</option>
     </select><br>
-    <input type="number" name="dinheiro2" id="idinheiro2">
-    <select name="moeda2" id="imoeda2" onselect="converter(idinheiro.value, imoeda1.value, imoeda2.value)">
+    <input type="number" name="dinheiro2" id="idinheiro2" value="1" oninput="entrada2()">
+    <select name="moeda2" id="imoeda2" oninput="entrada2()">
         <option value="real">R$</option>
         <option value="dolar">$</option>
         <option value="euro">€</option>
         <option value="won">₩</option>
         <option value="yen">¥</option>
     </select><br>
-    <table>
-        <thead>
-            <th>R$</th>
-            <th>$</th>
-            <th>€</th>
-            <th>₩</th>
-            <th>¥</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="td0"></td>
-                <td id="td1"></td>
-                <td id="td2"></td>
-                <td id="td3"></td>
-                <td id="td4"></td>
-            </tr>
-        </tbody>
-    </table>
+
 
     <script>
-        // recebe valor e a moeda do valor
+        
+        var converter_real = {'real': 1, 'dolar': 5.36, 'euro': 5.52, 'won': 0.0040, 'yen': 0.038}
+        // função para ser ativada quando eu entro com um valor no input, ou selector
+        function entrada1(){
+            // quando entra um valor no input#idinheiro1, alteramos o valor em idinheiro2
+            let input_2 = document.querySelector('input#idinheiro2')
+            let input_1 = document.querySelector('input#idinheiro1')
+
+            // strings contendo as moedas em questão
+            let moeda_1 = document.querySelector('select#imoeda1')
+            let moeda_2 = document.querySelector('select#imoeda2')
+
+            
+            input_2.value = converter(input_1.value, moeda_1.value, moeda_2.value)
+        }
+
+        function entrada2(){
+            // quando o valor entra no input_2, alteramos o input_1
+            let input_1 = document.querySelector('input#idinheiro1')
+            let input_2 = document.querySelector('input#idinheiro2')
+            let moeda_1 = document.querySelector('select#imoeda1')
+            let moeda_2 = document.querySelector('select#imoeda2')
+
+            input_1.value = converter(input_2.value, moeda_2.value, moeda_1.value)
+        }
+
         function converter(valor, moeda, moeda_alvo){
             valor = Number(valor)
 
-            // fatores para converter de qualquer moeda para real
-            let converter_real = {'real': 1, 'dolar': 5.36, 'euro': 5.52, 'won': 0.0040, 'yen': 0.038}
+            // converter de qualquer moeda para real
             valor_real = valor*converter_real[moeda]
 
-            //valor na moeda_alvo
+            // valor na moeda_alvo
             valor_final = valor_real*(1/converter_real[moeda_alvo])
-
-            var resultado = document.querySelector('input#idinheiro2')
-            resultado.value = Math.round(valor_final*1000)/1000
+            
+            return Math.round(valor_final*1000)/1000
         }
+
+    
     </script>
 </body>
 </html>
