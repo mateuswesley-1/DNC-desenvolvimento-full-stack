@@ -5,4 +5,53 @@
 
 *{
     font-family: Arial, Helvetica, sans-serif;
+    /* no celular precisamos de uma fonte proporcionalmente maior,
+    já que o tamanho absoluto da letra importa para nossa visão, não somente o tamanho relativo a tela */
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    /* o padding e o border fazem parte da
+    width e height do elemento, ou seja,
+    
+    se definirmos width: 300px, o tamanho real do 
+    elemento é 300px+2*border+2*padding.
+    
+    Quando usamos --box-sizing: border-box;--
+    e definimos width: 300px, o tamanho será 300 ""INCLUINDO"" border e padding*/
+    box-sizing: border-box;
+}
+
+html, body{
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background: #94dec5 url(../imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.748);
+    width: 90vw;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+main img{
+    display: none;
+}
+
+main h1{
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.489);
+}
+img#phone{
+    display: block;
+    margin: auto;
 }
