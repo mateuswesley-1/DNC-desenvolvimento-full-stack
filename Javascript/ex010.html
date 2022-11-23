@@ -30,9 +30,23 @@
     </style>
 </head>
 <body>
-    <h1>Conversão em Dinheiro</h1>
-    <label for="idinheiro">Quanto de dinheiro você tem? </label><br><input type="number" name="dinheiro" id="idinheiro" oninput="calcular(this.value)">
-
+    <h1>Convertor de Moedas</h1>
+    <input type="number" name="dinheiro" id="idinheiro" oninput="converter(this.value, imoeda1.value, imoeda2.value)">
+    <select name="moeda1" id="imoeda1" onselect="converter(idinheiro.value, this.value, imoeda2.value)">
+        <option value="real">R$</option>
+        <option value="dolar">$</option>
+        <option value="euro">€</option>
+        <option value="won">₩</option>
+        <option value="yen">¥</option>
+    </select><br>
+    <input type="number" name="dinheiro2" id="idinheiro2">
+    <select name="moeda2" id="imoeda2" onselect="converter(idinheiro.value, imoeda1.value, imoeda2.value)">
+        <option value="real">R$</option>
+        <option value="dolar">$</option>
+        <option value="euro">€</option>
+        <option value="won">₩</option>
+        <option value="yen">¥</option>
+    </select><br>
     <table>
         <thead>
             <th>R$</th>
@@ -53,14 +67,19 @@
     </table>
 
     <script>
-        function calcular(valor){
+        // recebe valor e a moeda do valor
+        function converter(valor, moeda, moeda_alvo){
             valor = Number(valor)
-            let valores = [valor, valor/5.36, valor/5.52, valor/0.0040, valor/0.038 ].map(x => Math.round(100*x)/100)
-            for(let i=0;i<5;i++){
-                let coluna = document.querySelector(`td#td${i}`)
-                coluna.innerHTML = valores[i].toLocaleString()
-            }
 
+            // fatores para converter de qualquer moeda para real
+            let converter_real = {'real': 1, 'dolar': 5.36, 'euro': 5.52, 'won': 0.0040, 'yen': 0.038}
+            valor_real = valor*converter_real[moeda]
+
+            //valor na moeda_alvo
+            valor_final = valor_real*(1/converter_real[moeda_alvo])
+
+            var resultado = document.querySelector('input#idinheiro2')
+            resultado.value = Math.round(valor_final*1000)/1000
         }
     </script>
 </body>
