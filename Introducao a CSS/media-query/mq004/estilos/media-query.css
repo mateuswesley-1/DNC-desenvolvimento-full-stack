@@ -1,3 +1,104 @@
 @charset "UTF-8";
 
 /*Versão para todas as demais mídias */
+
+/* 
+-------------------------------------------
+ Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+
+ Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+ Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...}
+
+ Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+
+ Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}
+-------------------------------------------
+*/
+
+@media print{
+    body{
+        /* Impressora não imprime bg*/
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    /*Não vai funcionar, pq essas coisas foram definidas em main h1 no outro css, que tem prioridade sobre só main */
+    main{
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    /* Agora sim*/
+    main h1{
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    main img#print{
+        display: block;
+        margin: auto;
+    }
+
+    main img#phone{
+        display: none;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: url('../imagens/back-tablet.jpg');
+    }
+
+    main img#tablet{
+        display: block;
+        margin: auto;
+    }
+
+    main img#phone{
+        display: none;
+    }
+}
+
+/*Computador */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main img#pc{
+        display: block;
+        margin: auto;
+    }
+
+    main img#phone{
+        display: none;
+    }
+}
+
+/* Televisão*/
+@media screen and (min-width: 1200px){
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main img#tv{
+        display: block;
+        margin: auto;
+    }
+
+    main img#phone{
+        display: none;
+    }
+}
