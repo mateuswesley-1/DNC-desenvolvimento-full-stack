@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Sorteio</h1>
+    </header>
+    <main>
+        <section id="containerLista">
+            <p>
+                String:
+                <input type="text" id="userTexto">
+                <input type="button" value="adicionar" onclick="adicionar()">
+            </p>
+            <select name="listaStrings" id="lista" size="10"></select>
+            <input type="button" value="sortear" onclick="sortear()">
+            <p id="resultSorteio"></p>
+        </section>
+    </main>
+    <script>
+        var lista = []
+
+        function adicionar(){
+           let txt = document.querySelector('input#userTexto')
+           let print_lista = document.querySelector('select#lista')
+           
+           lista.push(txt.value)
+           let item = document.createElement('option')
+           item.text = txt.value
+           print_lista.appendChild(item)
+           txt.value = ''
+           txt.focus()
+        }
+
+
+        function sortear(){
+            let indice = Math.floor(lista.length*Math.random())
+            let paragrafoSorteio = document.querySelector('p#resultSorteio')
+            paragrafoSorteio.innerHTML = lista[indice]
+        }
+    </script>
+</body>
+</html>
