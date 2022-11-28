@@ -28,7 +28,8 @@
 
     <script>
         function mensagem(){
-            let nome = document.querySelector('input#nome').value
+            // trim tira os espaços
+            let nome = document.querySelector('input#nome').value.trim()
             let msg = document.querySelector('div#div-msg')
             nome = nome[0].toUpperCase() + nome.slice(1)
             msg.innerHTML = `Oi ${nome}, seja bem vinde!`
