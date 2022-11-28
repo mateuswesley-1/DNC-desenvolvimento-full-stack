@@ -42,7 +42,7 @@
     main h1{
         font-family: 'Courier New', Courier, monospace;
         text-shadow: none;
-        color: black;
+        color: rgba(0, 0, 0, 0.485);
     }
 
     main img#print{
