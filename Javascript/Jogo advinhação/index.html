@@ -12,14 +12,19 @@
 </head>
 <body>
     <main>
-        <section>
+        <section id="tela1">
             <h1>Jogo da Adivinhação</h1>
-            <p>Adivinhe o número entre 0 e 10</p>
-            <span id="botao">
-                <input type="text" name="num" id="inum">
-            </span>
-            <input type="button" value="Tentar">
+            <p id="mensagem">Adivinhe o número entre 0 e 9</p>
+            <input type="text" name="num" id="inum" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+            <input type="button" value="Tentar" onclick="sortear()">
         </section>
+
+        <section id="tela2">
+            <h2 id="textoFim">Acertou em 3 tentativas</h2>
+            <input type="button" value="Jogar novamente" onclick="jogarNovamente()">
+        </section>
+
+
     </main>
     <script src="script.js"></script>
 </body>

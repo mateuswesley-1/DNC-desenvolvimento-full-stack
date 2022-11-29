@@ -51,20 +51,36 @@ section input[type='text']{
 section input[type='button']{
     width: 70px;
     height: 40px;
-    position: relative;
-    left: -5px;
     border: 0;
     background-color: #7879F1;
     color: #FFFFFF;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    position: relative;
+    left: -5px;
+    transition: border-radius .2;
 }
 
 section input[type='button']:hover{
-    background-color: #6262c7;
+    background-color: #5555aee3;
     color: #FFFFFF;
+    cursor: pointer;
+}
+/* Tela2*/
+
+section#tela2{
+    display: none;
 }
 
-section input[type='button']:active{
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.175);
+section#tela2 input[type='button']{
+    border-radius: 4px;
+    padding: 10px;
+    width: auto;
+    margin-top: 20px;
 }
+
+
+
+
+
+
