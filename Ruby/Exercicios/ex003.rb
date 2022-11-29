@@ -1,13 +1,5 @@
-if Float('mateus') rescue true
-    puts 'cu'
-else
-    puts 'xereka'
-end
-
-
-begin
-  Float('mateus')
-rescue
-end
+puts 'Digite um número: '
+num = gets.chomp.strip
+puts Float(num)
 
 
