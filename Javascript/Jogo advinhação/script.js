@@ -9,7 +9,7 @@ function sortear(){
     var num_user = document.querySelector('input#inum')
     var mensagem = document.querySelector('h2#textoFim')
     var alerta = document.querySelector('p#mensagem')
-
+    num_tentativas += 1
     if(num_user.value > 9 || num_user.value < 0 ){
         alerta.style.color = 'red'
     }else{
@@ -18,11 +18,11 @@ function sortear(){
             tela1.style.display = 'none'
             tela2.style.display = 'block'
 
-            num_tentativas += 1
             mensagem.innerHTML = `Você acertou em ${num_tentativas} tentativas!`
         }else{
-            num_tentativas += 1
+
             num_user.style.border = '2px solid red'
+            document.querySelector('p#tentativas').innerHTML = `Tentativas: ${num_tentativas}`
         }
 
     }

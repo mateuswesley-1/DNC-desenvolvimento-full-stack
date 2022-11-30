@@ -66,6 +66,11 @@ section input[type='button']:hover{
     color: #FFFFFF;
     cursor: pointer;
 }
+
+section p#tentativas{
+    margin: 20px;
+}
+
 /* Tela2*/
 
 section#tela2{
