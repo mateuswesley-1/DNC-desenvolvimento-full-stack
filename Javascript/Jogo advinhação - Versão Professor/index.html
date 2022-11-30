@@ -17,14 +17,14 @@
             <p id="mensagem">Adivinhe o número entre 0 e 9</p>
             <form action="">
                 <input type="text" name="num" id="inum" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-                <input type="button" value="Tentar" onclick="sortear()">
+                <input type="button" value="Tentar" id="btnTry">
             </form>
             <p id="tentativas">Tentativas: 0</p>
         </section>
 
         <section class="tela2 hide">
             <h2 id="textoFim">Acertou em 3 tentativas</h2>
-            <input type="button" value="Jogar novamente" onclick="jogarNovamente()">
+            <input type="button" value="Jogar novamente" id="btnAgain">
         </section>
 
 
