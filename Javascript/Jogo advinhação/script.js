@@ -2,13 +2,13 @@
 // verificar se é igual ao valor escolhido
 // se for igual, finaliza o jogo
 // senão, continua, contando cada erro para exibir no final
-var num_random = Math.floor(Math.random()*10)
-var num_tentativas = 0
+let num_random = Math.floor(Math.random()*10)
+let num_tentativas = 0
+const num_user = document.querySelector('input#inum')
+const mensagem = document.querySelector('h2#textoFim')
+const alerta = document.querySelector('p#mensagem')
 
 function sortear(){
-    var num_user = document.querySelector('input#inum')
-    var mensagem = document.querySelector('h2#textoFim')
-    var alerta = document.querySelector('p#mensagem')
     num_tentativas += 1
     if(num_user.value > 9 || num_user.value < 0 ){
         alerta.style.color = 'red'
@@ -40,3 +40,16 @@ function jogarNovamente(){
     tela1.style.display = 'block'
     tela2.style.display = 'none'
 }
+
+
+/* Event Listeners*/
+
+/* Sorteio*/
+const btn1 = document.querySelector('input#btnSorteio')
+
+btn1.addEventListener('click', sortear)
+
+/* Jogar novament*/
+const btn2 = document.querySelector('input#btnJogar')
+
+btn2.addEventListener('click', jogarNovamente)
