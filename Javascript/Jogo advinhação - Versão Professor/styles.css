@@ -29,7 +29,7 @@ section{
     margin-top: -12rem;
 }
 
-section p{
+section p#mensagem{
     margin-bottom: 50px;
     margin-top: 10px;
     opacity: 0.8;
@@ -66,6 +66,7 @@ section input[type='button']:hover{
     color: #FFFFFF;
     cursor: pointer;
 }
+
 /* Tela2*/
 
 .hide{
@@ -79,7 +80,11 @@ section.tela2 input[type='button']{
     margin-top: 20px;
 }
 
+/* Tela1 */
 
+section p#tentativas{
+    margin: 20px;
+}
 
 
 
