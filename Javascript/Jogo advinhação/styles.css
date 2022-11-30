@@ -48,7 +48,7 @@ section input[type='text']{
 }
 
 
-section input[type='button']{
+section button{
     width: 70px;
     height: 40px;
     border: 0;
@@ -61,7 +61,7 @@ section input[type='button']{
     transition: background-color .5s;
 }
 
-section input[type='button']:hover{
+section button:hover{
     background-color: #5555aee3;
     color: #FFFFFF;
     cursor: pointer;
@@ -73,15 +73,18 @@ section p#tentativas{
 
 /* Tela2*/
 
-section#tela2{
-    display: none;
-}
 
-section#tela2 input[type='button']{
+section.tela2 button{
     border-radius: 4px;
     padding: 10px;
     width: auto;
     margin-top: 20px;
+}
+
+/* hide */
+
+.hide{
+    display: none;
 }
 
 
