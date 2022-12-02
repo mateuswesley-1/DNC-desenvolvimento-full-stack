@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(124, 177, 173);
+}
+
+div.botoes{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(160, 207, 222);
+    border-radius: 40px;
+}
+
+div.contador{
+    font-size: 5em;
+    display: flex;
+}
+
+div.botoes{
+    display: flex;
+
+}
+
+div.botoes span{
+    font-size: 70px;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.21);
+}
+
+div.botoes span:hover{
+    position: relative;
+    top: -2px;
+    left: -2px;
+    text-shadow: 7px 7px 9px rgba(0, 0, 0, 0.21);
+    cursor: pointer;
+}
