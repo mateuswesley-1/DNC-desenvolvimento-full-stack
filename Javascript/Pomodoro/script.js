@@ -36,8 +36,9 @@ for(let i=0; i<arrayBotoes.length; i+=2){
     })
 }
 
+/*
 arrayBotoes[0].addEventListener('click', playTimer)
-
+*/
 
 
 

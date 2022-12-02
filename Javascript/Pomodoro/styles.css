@@ -11,6 +11,9 @@
     --buton-bg-color: hsla(var(--cor-base-botao), 100%, 63%, 0.13);
     --text-weight: 700;
     --text-size: 48px;
+
+
+    font-size: 62.5%;
 }
 
 body{
@@ -24,6 +27,19 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+body main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+body footer{
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+ 
 span{
     position: relative;
     top: 1px;
@@ -44,7 +60,7 @@ span{
     background-color: var(--buton-bg-color);
     border-radius: 40px;
     width: 90px;
-    height: 35px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -69,6 +85,9 @@ button:hover{
 .botao.play{
     color: var(--button-color)
 }
+
+
+
 
 
 
