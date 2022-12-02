@@ -7,9 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <style>
         .material-symbols-outlined {
@@ -28,58 +26,55 @@
 </head>
 <body>
 
-    <div class="container">
+    <main class="container">
 
         <div class="contador">
-            <div class="hora">
-                00:
-            </div>
-            <div class="minutos">
-                00
-            </div>
+            <span class="minutos">25</span>
+            <span>:</span>
+            <span class="segundos">00</span>
         </div>
 
         <div class="botoes">
-            <div class="botao play">
+            <button class="botao play">
                 <span class="material-symbols-outlined">
                 play_arrow
                 </span>
-            </div>
-
-            <div class="botao pause hide">
+            </button>
+            <button class="botao pause hide">
                 <span class="material-symbols-outlined">
                     pause
                 </span>
-            </div>
+            </button>
 
 
-            <div class="botao stop">
+            <button class="botao stop">
                 <span class="material-symbols-outlined">
                     stop
                 </span>
-            </div>
-
-            <div class="botao timer hide">
+            </button>
+            <button class="botao timer hide">
                 <span class="material-symbols-outlined">
                     timer
                 </span>
-            </div>
-
-            <div class="botao musica">
-                <span class="material-symbols-outlined">
-                    volume_up
-                </span>
-            </div>
-
-            <div class="botao musica hide">
-                <span class="material-symbols-outlined">
-                    volume_off
-                </span>
-            </div>
+            </button>
 
         </div>
 
-    </div>
+    </main>
+
+    <footer>
+        <button>
+            <span class="material-symbols-outlined">
+                volume_up
+            </span>
+        </button>
+
+        <button class="botao hide">
+            <span class="material-symbols-outlined">
+                volume_off
+            </span>
+        </button>
+    </footer>
 
 
 <script src="script.js"></script>
