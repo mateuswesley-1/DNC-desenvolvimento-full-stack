@@ -16,6 +16,8 @@ main{
     border-radius: 10px;
     padding: 20px 50px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.177);
+    width: 200px;
+    height: 300px;
 }
 
 .ligada img,
