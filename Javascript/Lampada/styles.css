@@ -11,21 +11,29 @@ body{
     text-align: center;
 }
 
+main{
+    background-color: rgba(230, 218, 166, 0.679);
+    border-radius: 10px;
+    padding: 20px 50px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.177);
+}
+
+.ligada img,
+.desligada img,
+.quebrada img{
+    padding: 0px;
+}
+
+.desligada{
+    position: relative;
+    left: 2px;
+}
 
 
 .hide{
     display: none;
 }
 
-.ligada{
-    position: relative;
-    left: -5px;
-}
-
-.desligada{
-    position: relative;
-    left: -4px;
-}
 
 input{
     padding: 5px;

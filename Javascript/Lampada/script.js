@@ -8,21 +8,17 @@ let interruptor = document.querySelector("input[value='interruptor']")
 
 
 // Métodos
-function ligar(){
-    lampaga_ligada.classList.remove('hide')
-    lampada_desligada.classList.add('hide')
+function ligar_desligar(){
+    lampaga_ligada.classList.toggle('hide')
+    lampada_desligada.classList.toggle('hide')
 }
 
-function desligar(){
-    lampaga_ligada.classList.add('hide')
-    lampada_desligada.classList.remove('hide')
-}
 
 function quebrar(){
     lampaga_ligada.classList.add('hide')
     lampada_desligada.classList.add('hide')
     lampada_quebrada.classList.remove('hide')
-    
+    interruptor.classList.add('hide')
 }
 
 // criar eventos para o clique nos botoes que adicionam e tiram a classe hide das imagens
