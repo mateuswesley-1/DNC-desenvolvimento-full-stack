@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    padding: 50px;
+    background-color: rgb(151, 154, 146);
+    text-align: center;
+}
+
+
+main{
+    height: 50vh;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .card{
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 1px solid rgba(128, 128, 128, 0.227);
+    padding: 15px;
+}
+
+main .card .inputProduto{
+    display: grid;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+main .card .inputProduto input{
+    padding: 4px 3px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.095);
+}
+
+main .card button{
+    padding: 7px 6px;
+    background-color: rgb(151, 154, 146);
+    color: #060606;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: all ease .5s;
+}
+
+main .card button:hover{
+    background-color: rgb(10, 10, 10);
+    color: #ffff;
+    cursor: pointer;
+}
+
+.conteudo table{
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 3px 3px 0px rgb(163, 163, 163);
+}
+
+.conteudo table th, td{
+    border: 1px solid rgba(0, 0, 0, 0.314);
+    padding: 2px;
+}
+
+.conteudo table th{
+    background-color: rgb(151, 154, 146);
+}

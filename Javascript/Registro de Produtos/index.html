@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Produtos</h1>
+    </header>
+
+    <main>
+        <div>
+            <h1>Produtos</h1>
+            <p>Lista de Produto</p>
+        </div>
+        <div class="card">
+            <div class="inputProduto">
+                <label for="iproduto">Produto</label>
+                <input type="text" id='iproduto' name='produto' placeholder="Nome do Produto">
+            </div>
+
+            <div class="inputProduto">
+                <label for="ivalor">Valor</label>
+                <input type="text" placeholder="R$ 0" id="ivalor" name="valor">
+            </div>
+            <button id="add">Adicionar</button>
+            <button id="cancel">Cancelar</button>
+        </div>
+        <div class="conteudo">
+
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <TH>Remover</TH>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
