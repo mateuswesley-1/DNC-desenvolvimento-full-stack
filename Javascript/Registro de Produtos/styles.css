@@ -16,7 +16,7 @@ header{
 
 
 main{
-    height: 50vh;
+    height: 90vh;
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ main .card button:hover{
     border-collapse: collapse;
     width: 100%;
     box-shadow: 3px 3px 0px rgb(163, 163, 163);
+    text-align: center;
 }
 
 .conteudo table th, td{
@@ -73,3 +74,4 @@ main .card button:hover{
 .conteudo table th{
     background-color: rgb(151, 154, 146);
 }
+

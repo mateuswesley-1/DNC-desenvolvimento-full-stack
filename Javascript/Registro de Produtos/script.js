@@ -5,6 +5,7 @@
 
 //Variaveis
 let botaoAdicionar = document.querySelector('button#add')
+let botaoCancelar = document.querySelector('button#cancel')
 let Tabela = document.querySelector('table>tbody')
 // Criando classe
 
@@ -27,10 +28,12 @@ class produto{
         let nome_produto = document.querySelector('input#iproduto').value
         let valor_produto = document.querySelector('input#ivalor').value
         let produto = {}
+
+        // this.id faz referencia a classe, estamos pegando uma propriedade da classe e atribuindo ao
+        // atributo do produto
         produto.id = this.id
         produto.nome = nome_produto
         produto.valor = valor_produto
-
         return produto
     }
 
@@ -57,26 +60,35 @@ class produto{
         this.id+=1
     }
 
-    Listar(produto){
-        Tabela.innerHTML += `<tr id=${produto.id}>
-                                <td>${produto.id}</td>
-                                <td>${produto.nome}</td>
-                                <td>${produto.valor}</td>
-                                <td><button onclick='Remover(${produto})'>Remover</button></td>
-                            </tr>
-                            `
+    Listar(){
+        let tbody = document.querySelector("div.conteudo>table>tbody")
+        tbody.innerText = ''
+
+        for(let i = 0; i<this.arrayProdutos.length; i++){
+            let tr = tbody.insertRow()
+
+            let td_id = tr.insertCell()
+            let td_nome = tr.insertCell()
+            let td_preco = tr.insertCell()
+            let td_del = tr.insertCell()
+
+            td_id.innerText = this.arrayProdutos[i].id
+            td_nome.innerText = this.arrayProdutos[i].nome
+            td_preco.innerText = this.arrayProdutos[i].valor
+            td_del.innerHTML = `<span class='material-symbols-outlined' onclick='this.Remover(${i})'>delete</span>`
+
+        }
+    }
+    
+    Cancelar(){
+        document.querySelector('input#ivalor').value = ''
+        document.querySelector('input#iproduto').value = ''
     }
 
-    Remover(produto){
-        Tabela.innerHTML.replace(`<tr id=${produto.id}>
-        <td>${produto.id}</td>
-        <td>${produto.nome}</td>
-        <td>${produto.valor}</td>
-        <td><button onclick='Remover(${produto})'>Remover</button></td>
-    </tr>
-    `,'')
-}
+    Remover(indice){
+        this.arrayProdutos.splice(indice)
     }
+}
 
 
 
@@ -88,3 +100,7 @@ botaoAdicionar.addEventListener('click', function(){
     novo_produto.Adicionar()
    }
 )
+
+botaoCancelar.addEventListener('click', function(){
+    novo_produto.Cancelar()
+})
