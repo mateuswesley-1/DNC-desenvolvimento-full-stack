@@ -21,7 +21,8 @@ class produto{
         if(this.Validar(produto)==true){
             this.Salvar(produto)
         }
-        this.Listar(produto)
+        this.Listar()
+        this.Cancelar()
     }
 
     lerDados(){
@@ -75,11 +76,11 @@ class produto{
             td_id.innerText = this.arrayProdutos[i].id
             td_nome.innerText = this.arrayProdutos[i].nome
             td_preco.innerText = this.arrayProdutos[i].valor
-            td_del.innerHTML = `<span class='material-symbols-outlined' onclick='this.Remover(${i})'>delete</span>`
+            td_del.innerHTML = `<button onclick='novo_produto.Remover(${i})'><span class='material-symbols-outlined'>delete</span></button>`
 
         }
     }
-    
+
     Cancelar(){
         document.querySelector('input#ivalor').value = ''
         document.querySelector('input#iproduto').value = ''
@@ -87,6 +88,7 @@ class produto{
 
     Remover(indice){
         this.arrayProdutos.splice(indice)
+        this.Listar()
     }
 }
 
@@ -103,4 +105,5 @@ botaoAdicionar.addEventListener('click', function(){
 
 botaoCancelar.addEventListener('click', function(){
     novo_produto.Cancelar()
-})
+    }
+)
