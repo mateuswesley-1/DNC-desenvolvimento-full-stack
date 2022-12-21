@@ -51,9 +51,9 @@ class produto{
         if(msg!=''){
             alert(msg)
             return false
-        }else{
-            return true
         }
+            return true
+
     }
 
     Salvar(produto){

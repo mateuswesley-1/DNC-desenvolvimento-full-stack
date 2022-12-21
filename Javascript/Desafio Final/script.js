@@ -3,7 +3,7 @@ const horas = document.querySelector("#horas")
 const minutos = document.querySelector("#minutos")
 const segundos = document.querySelector("#segundos")
 
-const data_lançamento = new Date("20 dec 2022")
+const data_lançamento = new Date("20 dec 2023")
 
 function countDown(){
     const hoje = new Date()
