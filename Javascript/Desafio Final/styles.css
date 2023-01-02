@@ -120,6 +120,7 @@ footer{
 
 footer div.eps{
     display: flex;
+    gap: 10px;
 }
 
 footer div.botao{
