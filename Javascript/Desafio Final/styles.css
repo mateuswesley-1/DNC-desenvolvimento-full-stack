@@ -129,6 +129,8 @@ footer{
 
 footer div.eps{
     display: flex;
+    justify-content: flex-start;
+    position: relative;
     gap: 10px;
 }
 
@@ -146,7 +148,6 @@ footer div.botao button{
     font-weight: bold;
     font-size: 25px;
     transition: background-color .5s;
-
 }
 /* Dividindo o estilo para qnd nao tem seta em cima e qnd tem*/
 
