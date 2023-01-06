@@ -26,6 +26,15 @@ header, footer{
     background-color: rgba(211, 211, 211, 0.441);
 }
 
+/* classes gerais que serao usadas para os eventos js */
+.highlight{
+    position: relative;
+    top: -5px;
+    left: -4px;
+    box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.495);
+}
+
+
 div.logo{
     height: 100px;
     display: inline-block;
@@ -132,7 +141,6 @@ footer div.botao{
 footer div.botao button{
     width: 250px;
     height: 80px;
-    background-color: orange;
     border-radius: 4px;
     border: none;
     font-weight: bold;
@@ -140,28 +148,26 @@ footer div.botao button{
     transition: background-color .5s;
 
 }
+/* Dividindo o estilo para qnd nao tem seta em cima e qnd tem*/
 
-footer div.botao button a{
-    text-decoration: none;
+/* Normal*/
+footer div.botao button.normal{
+    background-color: orange;
     color: black;
-
 }
 
-footer div.botao button:hover{
-    background-color: rgb(229, 224, 215);
+/*mouse over */
+footer div.botao button.hover{
+    background-color: black;
     color: orange;
     cursor: pointer;
 }
+
 
 footer div img{
     width: 130px;
 }
 
-footer div img:hover{
-    position: relative;
-    top: -3px;
-    box-shadow: 2px 5px 0px rgba(0, 0, 0, 0.416);
-    cursor: pointer;
-}
+
 
 

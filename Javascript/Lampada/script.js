@@ -21,6 +21,7 @@ function quebrar(){
     interruptor.classList.add('hide')
 }
 
+
 // criar eventos para o clique nos botoes que adicionam e tiram a classe hide das imagens
 interruptor.addEventListener('click', ligar_desligar)
 
