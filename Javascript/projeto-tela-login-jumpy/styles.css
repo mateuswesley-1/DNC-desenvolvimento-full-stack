@@ -1,0 +1,127 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    background-color: yellow;
+}
+
+.error{
+    margin-top: 2px;
+    height: 20px;
+    color: rgba(227, 61, 61, 0.948);
+}
+
+main{
+    background: #5a5757;
+}
+
+main .logo-dnc{
+    position: relative;
+    left: 1.5em;
+    top: 1.5em;
+    display: inline;
+}
+
+section#descrition{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    padding: 50px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.784);
+    margin-top: 3em;
+}
+
+section#descrition>h1{
+    font-weight: 800;
+    margin-top: 0;
+}
+
+section#descrition>h2{
+    margin-top: 1em;
+}
+
+section#descrition>p>span{
+    background: #303030;
+}
+
+section#formulario{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+section#formulario>form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#formulario>form div{
+    display:flex;
+    flex-direction: column;
+    height: 5.5em;
+}
+
+section#formulario>form button{
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    background-color: rgba(12, 112, 242, 0.988);
+    border: none;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.244);
+    color: white;
+    font-weight: 800;
+    transition: all .2s;
+}
+
+button:hover{
+    background-color: rgb(24, 1, 27);
+    cursor: pointer;
+    position: relative;
+}
+
+
+section#formulario>form input{
+    border-radius: 8px;
+    width: 300px;
+    height: 35px;
+    padding: 5px;
+}
+
+section#formulario>form label{
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+
+
+    section#formulario>form>input{
+        max-width: 100%
+    }
+
+    section#descrition{
+        font-size: 20px;
+        line-height: 30px;
+        padding: 50px;
+    }
+
+
+}
