@@ -16,7 +16,7 @@ body{
 .error{
     margin-top: 2px;
     height: 20px;
-    color: rgba(227, 61, 61, 0.948);
+    color: #e33d3df2;
 }
 
 main{
@@ -69,10 +69,10 @@ section#formulario>form{
 section#formulario>form div{
     display:flex;
     flex-direction: column;
-    height: 5.5em;
+    height: 5.0em;
 }
 
-section#formulario>form button{
+section#formulario>form input[type= button]{
     margin: 10px;
     border-radius: 5px;
     width: 300px;
@@ -85,7 +85,7 @@ section#formulario>form button{
     transition: all .2s;
 }
 
-button:hover{
+input[type= button]:hover{
     background-color: rgb(24, 1, 27);
     cursor: pointer;
     position: relative;
